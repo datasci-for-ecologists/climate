@@ -1,3 +1,4 @@
+library(tidyverse)
 
 
 # Select station level data:
@@ -29,5 +30,4 @@ observations <-
       sep = ':') %>% 
     mutate_at(
       vars(precip:temp_max),
-      ~as.numeric(.)) %>%
-    mutate(date = as_date(date))
+      ~as.numeric(.)) 
